@@ -5,11 +5,11 @@ let sec = document.getElementById("sec")
 var now = new Date()
 
 if(now.getHours()>12){
-    var hours = now.getHours()-12 
-    var pm = " PM"
+    var hours = now.getHours()-12
+    
 }else{
     var hours = now.getHours()
-    var pm = " AM"
+    
 
 }
 setInterval(()=>{
@@ -17,5 +17,5 @@ setInterval(()=>{
     var now = new Date()
     hour.innerText=  (hours<10?"0":"")+ hours
     mins.innerHTML=(now.getMinutes()<10?"0":"")+now.getMinutes()
-    sec.innerText=(now.getSeconds()<10?"0":"")+now.getSeconds() + pm
+    sec.innerText=(now.getSeconds()<10?"0":"")+now.getSeconds() 
 },1000)
